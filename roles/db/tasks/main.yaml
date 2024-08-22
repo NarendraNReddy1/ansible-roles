@@ -18,8 +18,8 @@
 
 - name: checking password set or not
   community.mysql.mysql_info:
-    login_user: root
-    login_host: "{{login_host}}"
+    login_user: "{{ login_user }}"
+    login_host: "{{ DB_HOST }}"
     login_password: "{{mysql_root_password}}"
     filter: version    
   ignore_errors: yes 
