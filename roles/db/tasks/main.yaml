@@ -14,7 +14,11 @@
     name:
     - PyMySQL
     - cryptography
-    executable: pip3.9       
+    executable: pip3.9      
+
+- name: import common role
+  ansible.builtin.import_role:
+    name: common
 
 - name: checking password set or not
   community.mysql.mysql_info:

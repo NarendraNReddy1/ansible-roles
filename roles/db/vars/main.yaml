@@ -1,2 +1,2 @@
 #mysql_root_password: ExpenseApp@1
-#login_host: db.narendra.shop
+#DB_HOST: db.narendra.shop
