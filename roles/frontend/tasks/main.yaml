@@ -37,11 +37,11 @@
   notify:
   - restart nginx  
 
-# - name: restart
-#   ansible.builtin.service:
-#     name: nginx
-#     state: restarted
-#     enabled: yes
+- name: restart
+  ansible.builtin.service:
+    name: nginx
+    state: restarted
+    enabled: yes
 
 
 
