@@ -23,16 +23,21 @@
   ansible.builtin.user:
     name: expense
 
-- name: /app
-  ansible.builtin.file:
-    path: /app
-    state: directory
+- name: runn app pre-requisties
+    ansible.builtin.import_role:  
+      name: common 
+      tasks_from: app-pre-req
 
-- name: unarchieve
-  ansible.builtin.unarchive:
-    src:  https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip
-    dest: /app    
-    remote_src: yes   
+# - name: /app
+#   ansible.builtin.file:
+#     path: /app
+#     state: directory
+
+# - name: unarchieve
+#   ansible.builtin.unarchive:
+#     src:  https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip
+#     dest: /app    
+#     remote_src: yes   
 
 - name: npm install
   ansible.builtin.command: npm install
