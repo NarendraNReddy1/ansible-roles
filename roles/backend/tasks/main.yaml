@@ -24,9 +24,10 @@
     name: expense
 
 - name: runn app pre-requisties
-    ansible.builtin.import_role:  
-      name: common 
-      tasks_from: app-pre-req
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: app-re-req
+
 
 # - name: /app
 #   ansible.builtin.file:
