@@ -1,7 +1,7 @@
 - name: mysql server
-    ansible.builtin.dnf:
-      name: mysql-server
-      state: latest
+  ansible.builtin.dnf:
+    name: mysql-server
+    state: latest
 
   - name: start service
     ansible.builtin.service:
